@@ -1,0 +1,23 @@
+services:
+  new_arm_dev:
+    container_name: new_arm
+    build:
+      context: .
+      dockerfile: Docker/Dockerfile
+
+    environment:
+      - DISPLAY=${DISPLAY}
+      - QT_X11_NO_MITSHM=1
+      - ROS_DOMAIN_ID=0
+
+    privileged: true
+    network_mode: host
+    stdin_open: true
+    tty: true
+
+    volumes:
+      # Updated to match your current project folder name
+      - .:/home/ros/NewARM
+      # Required for MoveIt Setup Assistant GUI
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+      - ~/.bash_history:/home/ros/.bash_history

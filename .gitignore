@@ -1,0 +1,33 @@
+# === Modify this file as needed === #
+
+# === Colcon build artifacts ===
+build/
+install/
+log/
+
+# === CMake ===
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# === Python ===
+*.pyc
+__pycache__/
+*.pyo
+
+# === ROS generated ===
+*.bag
+
+# === Editor / IDE ===
+.vscode/
+.idea/
+*.swp
+
+# === OS ===
+.DS_Store
+Thumbs.db
+
+# === Testing ===
+*.log
+*.out

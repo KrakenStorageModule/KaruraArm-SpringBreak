@@ -1,0 +1,25 @@
+moveit_setup_assistant_config:
+  urdf:
+    package: arm_description
+    relative_path: urdf/arm.urdf
+  srdf:
+    relative_path: config/URDF.srdf
+  package_settings:
+    author_name: Pranav Kalaiselvan
+    author_email: pranavkalai04@tamu.edu
+    generated_timestamp: 1771793994
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+      - velocity
+  modified_urdf:
+    xacros:
+      - control_xacro
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+      - velocity
