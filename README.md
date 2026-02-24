@@ -1,4 +1,4 @@
-# NEWARM (Pranav's Version - Feb 2026) Installation & Run Instructions
+# NewARM (Pranav's Version - Feb 2026) Installation & Run Instructions
 
 ## 1. Install Dependencies:
 - **Docker Desktop**: [Download here](https://www.docker.com/products/docker-desktop/)
