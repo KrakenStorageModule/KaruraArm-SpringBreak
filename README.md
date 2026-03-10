@@ -1,4 +1,4 @@
-# NewARM (Pranav's Version - Feb 2026) Installation & Run Instructions
+# NewARM (Johan's Version - March 2026) Installation & Run Instructions
 
 ## 1. Install Dependencies:
 - **Docker Desktop**: [Download here](https://www.docker.com/products/docker-desktop/)
@@ -43,8 +43,18 @@ colcon build
 source install/setup.bash
 ```
 
-### Launch RViz:
+### Launch RViz (for pre-planned movements):
 
 ```bash
 ros2 launch moveit_config demo.launch.py
+```
+### Launch RViz (for keyboard control):
+
+Terminal 1:
+```bash
+ros2 launch arm_description teleop.launch.py
+```
+Terminal 2:
+```bash
+ros2 run arm_control arm_controller
 ```
