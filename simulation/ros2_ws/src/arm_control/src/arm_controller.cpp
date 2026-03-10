@@ -43,7 +43,7 @@
 const std::string TWIST_TOPIC = "/servo_node/delta_twist_cmds";
 const std::string JOINT_TOPIC = "/servo_node/delta_joint_cmds";
 const size_t ROS_QUEUE_SIZE = 10;
-const std::string EEF_FRAME_ID = "hand";
+const std::string EEF_FRAME_ID = "hand_v111";
 const std::string BASE_FRAME_ID = "base_link";
 int case_select = 0;
 int direction = 1;
@@ -273,37 +273,37 @@ int KeyboardServo::keyLoop()
 
       case KEYCODE_1:
         RCLCPP_DEBUG(nh_->get_logger(), "1");
-        joint_msg->joint_names.push_back("joint_1"); //joint1
+        joint_msg->joint_names.push_back("Revolute_6"); //joint1 (base rotation)
         joint_msg->velocities.push_back(0.5*joint_vel_cmd_); 
         publish_joint = true;
         break;
       case KEYCODE_2:
         RCLCPP_DEBUG(nh_->get_logger(), "2");
-        joint_msg->joint_names.push_back("joint_2"); //joint2
+        joint_msg->joint_names.push_back("Revolute_5"); //joint2 (shoulder)
         joint_msg->velocities.push_back(0.5*joint_vel_cmd_);
         publish_joint = true;
         break;
       case KEYCODE_3:
         RCLCPP_DEBUG(nh_->get_logger(), "3");
-        joint_msg->joint_names.push_back("joint_3"); //...
+        joint_msg->joint_names.push_back("Revolute_4"); //joint3 (elbow)
         joint_msg->velocities.push_back((0.5)*joint_vel_cmd_);
         publish_joint = true;
         break;
       case KEYCODE_4:
         RCLCPP_DEBUG(nh_->get_logger(), "4");
-        joint_msg->joint_names.push_back("joint_4");
+        joint_msg->joint_names.push_back("Revolute_3"); //joint4 (wrist1)
         joint_msg->velocities.push_back((-0.5)*joint_vel_cmd_);
         publish_joint = true;
         break;
       case KEYCODE_5:
         RCLCPP_DEBUG(nh_->get_logger(), "5");
-        joint_msg->joint_names.push_back("joint_5");
+        joint_msg->joint_names.push_back("Revolute_2"); //joint5 (wrist2)
         joint_msg->velocities.push_back((-0.5)*joint_vel_cmd_);
         publish_joint = true;
         break;
       case KEYCODE_6:
         RCLCPP_DEBUG(nh_->get_logger(), "6");
-        joint_msg->joint_names.push_back("joint_6");
+        joint_msg->joint_names.push_back("Revolute_1"); //joint6 (wrist3/hand)
         joint_msg->velocities.push_back(0.5*joint_vel_cmd_);
         publish_joint = true;
         break;

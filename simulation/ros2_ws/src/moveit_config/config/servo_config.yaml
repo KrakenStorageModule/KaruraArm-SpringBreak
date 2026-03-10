@@ -1,0 +1,57 @@
+###############################################
+# MoveIt Servo configuration for NewARM
+###############################################
+
+# If true, the incoming commands will be "smoothed" to avoid large jumps
+use_gazebo: false
+## Properties of incoming commands
+command_in_type: "speed_units" # "unitless" or "speed_units"
+scale:
+  # Scale parameters are only used when command_in_type is "unitless"
+  linear:  0.6   # Max linear velocity [m/s]
+  rotational:  1.0   # Max rotational velocity [rad/s]
+  # Max joint velocity [rad/s] (only used for joint commands)
+  joint: 0.5
+
+## Properties of outgoing commands
+publish_period: 0.034  # ~30 Hz
+command_out_type: "trajectory_msgs/JointTrajectory" # or std_msgs/Float64MultiArray
+publish_joint_positions: true
+publish_joint_velocities: true
+publish_joint_accelerations: false
+
+## Plugins for smoothing outgoing commands
+use_smoothing: false
+
+## MoveIt-specific parameters
+move_group_name:  arm  # The planning group name
+planning_frame: base_link  # The frame Servo plans in
+ee_frame_name: hand_v111  # The end-effector frame
+
+## Topic names
+cartesian_command_in_topic: /servo_node/delta_twist_cmds  # TwistStamped
+joint_command_in_topic: /servo_node/delta_joint_cmds  # JointJog
+command_out_topic: /arm_controller/joint_trajectory  # Output trajectory topic
+status_topic: /servo_node/status  # Servo status
+
+## Incoming command timeout [seconds]
+incoming_command_timeout:  0.1
+
+## Joint limits
+joint_limit_margin: 0.1  # [radians] or [meters]
+
+## Collision checking (disabled for now — enable if needed)
+check_collisions: false
+collision_check_rate: 10.0  # Hz
+
+## Singularity parameters
+lower_singularity_threshold:  17.0
+hard_stop_singularity_threshold:  30.0
+leaving_singularity_threshold_multiplier: 2.0
+
+## Robot link model name (should match URDF robot name)
+robot_link_command_frame:  base_link
+
+## Override incoming command to 0 if stopped
+halt_all_joints_in_joint_mode: true
+halt_all_joints_in_cartesian_mode: true

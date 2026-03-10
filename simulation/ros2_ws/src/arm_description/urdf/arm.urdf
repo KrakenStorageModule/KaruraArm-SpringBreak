@@ -159,106 +159,53 @@
   </collision>
 </link>
 
-<joint name="Revolute_1" type="continuous">
+<joint name="Revolute_1" type="revolute">
   <origin xyz="0.004313 9.5e-05 -0.033725" rpy="0 0 0"/>
   <parent link="J5to6_v111"/>
   <child link="hand_v111"/>
   <axis xyz="-0.126869 -0.002806 0.991916"/>
+  <limit lower="-3.14159" upper="3.14159" effort="10.0" velocity="1.0"/>
 </joint>
-<transmission name="Revolute_1_tran">
-  <type>transmission_interface/SimpleTransmission</type>
-  <joint name="Revolute_1">
-    <hardwareInterface>PositionJointInterface</hardwareInterface>
-  </joint>
-  <actuator name="Revolute_1_actr">
-    <hardwareInterface>PositionJointInterface</hardwareInterface>
-    <mechanicalReduction>1</mechanicalReduction>
-  </actuator>
-</transmission>
 
-<joint name="Revolute_2" type="continuous">
+<joint name="Revolute_2" type="revolute">
   <origin xyz="-0.001102 -2.4e-05 -0.09414" rpy="0 0 0"/>
   <parent link="J4to5_v111"/>
   <child link="J5to6_v111"/>
   <axis xyz="-0.022114 0.999755 -0.0"/>
+  <limit lower="-3.14159" upper="3.14159" effort="10.0" velocity="1.0"/>
 </joint>
-<transmission name="Revolute_2_tran">
-  <type>transmission_interface/SimpleTransmission</type>
-  <joint name="Revolute_2">
-    <hardwareInterface>PositionJointInterface</hardwareInterface>
-  </joint>
-  <actuator name="Revolute_2_actr">
-    <hardwareInterface>PositionJointInterface</hardwareInterface>
-    <mechanicalReduction>1</mechanicalReduction>
-  </actuator>
-</transmission>
 
-<joint name="Revolute_3" type="continuous">
+<joint name="Revolute_3" type="revolute">
   <origin xyz="-0.562444 0.0 -0.0175" rpy="0 0 0"/>
   <parent link="J3to4_v111"/>
   <child link="J4to5_v111"/>
   <axis xyz="-0.0 -0.0 -1.0"/>
+  <limit lower="-3.14159" upper="3.14159" effort="10.0" velocity="1.0"/>
 </joint>
-<transmission name="Revolute_3_tran">
-  <type>transmission_interface/SimpleTransmission</type>
-  <joint name="Revolute_3">
-    <hardwareInterface>PositionJointInterface</hardwareInterface>
-  </joint>
-  <actuator name="Revolute_3_actr">
-    <hardwareInterface>PositionJointInterface</hardwareInterface>
-    <mechanicalReduction>1</mechanicalReduction>
-  </actuator>
-</transmission>
 
-<joint name="Revolute_4" type="continuous">
+<joint name="Revolute_4" type="revolute">
   <origin xyz="0.0 0.0 0.538" rpy="0 0 0"/>
   <parent link="J2to3_v211"/>
   <child link="J3to4_v111"/>
   <axis xyz="0.0 1.0 -0.0"/>
+  <limit lower="-3.14159" upper="3.14159" effort="10.0" velocity="1.0"/>
 </joint>
-<transmission name="Revolute_4_tran">
-  <type>transmission_interface/SimpleTransmission</type>
-  <joint name="Revolute_4">
-    <hardwareInterface>PositionJointInterface</hardwareInterface>
-  </joint>
-  <actuator name="Revolute_4_actr">
-    <hardwareInterface>PositionJointInterface</hardwareInterface>
-    <mechanicalReduction>1</mechanicalReduction>
-  </actuator>
-</transmission>
 
-<joint name="Revolute_5" type="continuous">
+<joint name="Revolute_5" type="revolute">
   <origin xyz="-0.001 0.00115 0.117" rpy="0 0 0"/>
   <parent link="J1to2_v111"/>
   <child link="J2to3_v211"/>
   <axis xyz="-0.0 1.0 -0.0"/>
+  <limit lower="-3.14159" upper="3.14159" effort="10.0" velocity="1.0"/>
 </joint>
-<transmission name="Revolute_5_tran">
-  <type>transmission_interface/SimpleTransmission</type>
-  <joint name="Revolute_5">
-    <hardwareInterface>PositionJointInterface</hardwareInterface>
-  </joint>
-  <actuator name="Revolute_5_actr">
-    <hardwareInterface>PositionJointInterface</hardwareInterface>
-    <mechanicalReduction>1</mechanicalReduction>
-  </actuator>
-</transmission>
 
-<joint name="Revolute_6" type="continuous">
+<joint name="Revolute_6" type="revolute">
   <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
   <parent link="base_link"/>
   <child link="J1to2_v111"/>
   <axis xyz="0.0 0.0 1.0"/>
+  <limit lower="-3.14159" upper="3.14159" effort="10.0" velocity="1.0"/>
 </joint>
-<transmission name="Revolute_6_tran">
-  <type>transmission_interface/SimpleTransmission</type>
-  <joint name="Revolute_6">
-    <hardwareInterface>PositionJointInterface</hardwareInterface>
-  </joint>
-  <actuator name="Revolute_6_actr">
-    <hardwareInterface>PositionJointInterface</hardwareInterface>
-    <mechanicalReduction>1</mechanicalReduction>
-  </actuator>
-</transmission>
+
 
 </robot>
