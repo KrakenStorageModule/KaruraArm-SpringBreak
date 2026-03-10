@@ -152,7 +152,7 @@ int KeyboardServo::keyLoop()
   auto node = rclcpp::Node::make_shared("hand_publisher");
   auto publisher = node->create_publisher<std_msgs::msg::Float64MultiArray>("status", 10);
   auto status_msg = std_msgs::msg::Float64MultiArray();  
-  status_msg.data.resize(1);
+  status_msg.data.resize(2);
 
   auto node1 = rclcpp::Node::make_shared("status_publisher");
   auto publisher1 = node1->create_publisher<std_msgs::msg::Float64MultiArray>("tuning_signal", 10);

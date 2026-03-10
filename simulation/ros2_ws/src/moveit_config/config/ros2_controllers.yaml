@@ -20,7 +20,14 @@ arm_controller:
       - Revolute_2
       - Revolute_1
     command_interfaces:
-      - position
+      - effort
     state_interfaces:
       - position
       - velocity
+    gains:
+      Revolute_1: {p: 500.0, i: 0.1, d: 10.0}
+      Revolute_2: {p: 500.0, i: 0.1, d: 10.0}
+      Revolute_3: {p: 500.0, i: 0.1, d: 10.0}
+      Revolute_4: {p: 500.0, i: 0.1, d: 10.0}
+      Revolute_5: {p: 500.0, i: 0.1, d: 10.0}
+      Revolute_6: {p: 500.0, i: 0.1, d: 10.0}

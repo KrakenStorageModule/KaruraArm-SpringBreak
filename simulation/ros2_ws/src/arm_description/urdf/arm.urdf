@@ -208,4 +208,41 @@
 </joint>
 
 
+
+<ros2_control name="arm_hardware" type="system">
+  <hardware>
+    <plugin>m3508_hardware_interface/M3508SystemInterface</plugin>
+  </hardware>
+  <joint name="Revolute_1">
+    <command_interface name="effort"/>
+    <state_interface name="position"><param name="initial_value">0.0</param></state_interface>
+    <state_interface name="velocity"/>
+  </joint>
+  <joint name="Revolute_2">
+    <command_interface name="effort"/>
+    <state_interface name="position"><param name="initial_value">0.0</param></state_interface>
+    <state_interface name="velocity"/>
+  </joint>
+  <joint name="Revolute_3">
+    <command_interface name="effort"/>
+    <state_interface name="position"><param name="initial_value">0.0</param></state_interface>
+    <state_interface name="velocity"/>
+  </joint>
+  <joint name="Revolute_4">
+    <command_interface name="effort"/>
+    <state_interface name="position"><param name="initial_value">0.0</param></state_interface>
+    <state_interface name="velocity"/>
+  </joint>
+  <joint name="Revolute_5">
+    <command_interface name="effort"/>
+    <state_interface name="position"><param name="initial_value">0.0</param></state_interface>
+    <state_interface name="velocity"/>
+  </joint>
+  <joint name="Revolute_6">
+    <command_interface name="effort"/>
+    <state_interface name="position"><param name="initial_value">0.0</param></state_interface>
+    <state_interface name="velocity"/>
+  </joint>
+</ros2_control>
+
 </robot>

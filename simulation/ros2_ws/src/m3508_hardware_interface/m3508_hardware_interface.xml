@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<library path="m3508_hardware_interface">
+  <class
+    name="m3508_hardware_interface/M3508SystemInterface"
+    type="m3508_hardware_interface::M3508SystemInterface"
+    base_class_type="hardware_interface::SystemInterface">
+    <description>
+      Hardware interface for DJI M3508 motors with C620 ESCs via CAN bus.
+      Supports simulation (echo) mode and real hardware mode.
+    </description>
+  </class>
+</library>

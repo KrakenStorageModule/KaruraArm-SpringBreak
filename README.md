@@ -48,6 +48,7 @@ source install/setup.bash
 ```bash
 ros2 launch moveit_config demo.launch.py
 ```
+
 ### Launch RViz (for keyboard control):
 
 Terminal 1:
